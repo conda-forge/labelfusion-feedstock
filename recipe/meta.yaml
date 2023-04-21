@@ -21,12 +21,14 @@ requirements:
     - python >=3.6
   run:
     - keyring
-    - numpy ==1.19.4
+    - numpy ==1.22.0
     - python >=3.6
     - setuptools
-    - simpleitk ==2.0.2
+    - simpleitk !=2.0.*,
+    - simpleitk !=2.2.1,
     - twine
     - wheel
+    - black
 
 test:
   imports:
