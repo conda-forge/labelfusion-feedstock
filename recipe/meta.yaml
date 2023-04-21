@@ -1,5 +1,5 @@
 {% set name = "LabelFusion" %}
-{% set version = "1.0.12" %}
+{% set version = "1.0.13" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/LabelFusion-{{ version }}.tar.gz
-  sha256: 6623257ed8a90bdbc41f054c2a29d326c76f8b54a7a111a90c4276127a9d441c
+  sha256: 180683c345d293d3c4de50b12466cc1a3cd2fb5ef46ca43728ea814015ec6250
 
 build:
   number: 0
