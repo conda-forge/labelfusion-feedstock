@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/LabelFusion-{{ version }}.tar.gz
-  sha256: 831d9dd30cfa207c325ce99e43948acf1a016c86302046ee86a20788b99a9ae2
+  sha256: 180683c345d293d3c4de50b12466cc1a3cd2fb5ef46ca43728ea814015ec6250
 
 build:
   number: 0
