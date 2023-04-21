@@ -24,8 +24,7 @@ requirements:
     - numpy ==1.22.0
     - python >=3.6
     - setuptools
-    - simpleitk !=2.0.*,
-    - simpleitk !=2.2.1,
+    - simpleitk !=2.0.*,!=2.2.1
     - twine
     - wheel
     - black
