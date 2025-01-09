@@ -7,22 +7,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/LabelFusion-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/LabelFusion-{{ version }}.tar.gz
   sha256: 4daf4e66be26e7e7b4908ae8cc049b94383b9bb6255c609bdc7ba082b3cb3a4c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - keyring
     - numpy ==1.22.0
-    - python >=3.6
+    - python >={{ python_min }}
     - setuptools
     - simpleitk !=2.0.*,!=2.2.1
     - twine
@@ -30,6 +30,8 @@ requirements:
     - black
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - LabelFusion
 
