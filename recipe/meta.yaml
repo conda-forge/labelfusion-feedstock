@@ -1,5 +1,5 @@
 {% set name = "LabelFusion" %}
-{% set version = "1.0.14" %}
+{% set version = "1.0.15" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/LabelFusion-{{ version }}.tar.gz
-  sha256: 4daf4e66be26e7e7b4908ae8cc049b94383b9bb6255c609bdc7ba082b3cb3a4c
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | lower }}-{{ version }}.tar.gz
+  sha256: 88021d97ffabe111825cd8d1f68a8c4595a0ad001ffb1bff3a6017fe9df45691
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,14 +21,16 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
-    - keyring
-    - numpy ==1.22.0
     - python >={{ python_min }}
+    - black
+    - keyring
+    - numpy >=1.19.2
+    - psutil
+    - requests
     - setuptools
     - simpleitk !=2.0.*,!=2.2.1
     - twine
     - wheel
-    - black
 
 test:
   requires:
