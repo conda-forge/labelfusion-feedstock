@@ -21,14 +21,16 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
-    - keyring
-    - numpy ==1.22.0
     - python >={{ python_min }}
+    - black
+    - keyring
+    - numpy >=1.19.2
+    - psutil
+    - requests
     - setuptools
     - simpleitk !=2.0.*,!=2.2.1
     - twine
     - wheel
-    - black
 
 test:
   requires:
